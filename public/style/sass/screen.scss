@@ -127,7 +127,7 @@ body {
 			float:left;
 			height: 625px;
 			max-width: 500px;
-			margin:0 60px 0 0;
+			margin:0;
 			padding: 80px 55px 0;
 
 			div {
@@ -147,10 +147,11 @@ body {
 			}
 		}
 		#dummyExplanation {
-			width:400px;
+			width:440px;
+			margin-left:60px;
 			float:left;
 			font-size: 2em;
-			text-align:justify;
+			//text-align:justify;
 		}
 	}
 
@@ -195,15 +196,57 @@ body {
 				&:hover{
 					color:rgba(255,255,255,0.8);
 				}
+				.chart{
+					width:100%;
+				}
 			}
 			ul.legend{
 				margin:0;
-				padding-left: 100px;
+				padding-left: 150px;
+				@include clearfix;
 				li{
 					float:left;
 					font-size:2em;
 					list-style-type:square;
 					margin-right:100px;
+				}
+			}
+		}
+	}
+
+	#whoUses {
+		h3 {
+			text-align:center;
+			margin:0 0 60px 0;
+		}
+	}
+	ul.trendSort {
+		text-align:center;
+		margin: 60px 0 0;
+		li{
+			display:inline-block;
+
+			a{
+				display:block;
+				padding: 20px 0 15px 0;
+				margin: 0px 30px;
+				width:200px;
+				text-align:center;
+				@include border-radius(5px);
+				cursor:pointer;
+				cursor:hand;
+				img{
+					height:60px;
+				}
+				&.google{
+					background: #D1554D;
+				}
+				&.twitter{
+					background: #3681C8;
+				}
+				&.plus{
+					font-size: 10em;
+					line-height:0.5em;
 				}
 			}
 		}
