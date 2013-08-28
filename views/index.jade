@@ -1,5 +1,44 @@
 extends layout
 
 block content
-	div(id='lineChartContainer',style="width:100%")
-		canvas(id='lineChart',width="800",height='400')
+	section(id='intro')
+		div(class='wrapper')
+			div(class='gjpresents')
+				img(src='/img/logo.png')
+				span PRESENTS
+
+			div(class='title')
+				h1 What are They Doing?
+				h2 A Survey of Interactive Infographics
+
+			div(class='scroll')
+				span(class="darr") &darr;
+				span Scroll
+	
+	section(id='whatAreThey')
+		div(class='wrapper')
+			h1(class='subhead') What are They?
+			div(id='dummyInfographic',class='chrome-frame')
+				div(class='text')
+				div(class='chart')
+				div(class='illustration')
+			div(id='dummyExplanation')
+				p.
+					Infographics are a way of conveying important data visually,
+					through the use of <b>Graphic Text</b>, <b>Charts</b>, and 
+					<b>Illustrations</b>.
+				p.
+					Infographics allow you to display only the most pertinent
+					pieces of information, and tell a story through illustration,
+					animation, and interactivity.
+
+	section(id='whyEffective')
+		div(class='wrapper')
+			h1(class='subhead') Why are They Effective?
+			div(class='chrome-frame')
+				p.
+					Studies show that users are more likely to both <b class="blue">read</b> and 
+					<b class="red">retain</b> information that's presented with color visuals. In 
+					addition, researchers found that adding pictures to an article 
+					makes people more inclined to believe what they're reading.
+				a(class='makeChart') Make Chart

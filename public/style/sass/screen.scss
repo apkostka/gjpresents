@@ -1,0 +1,211 @@
+@import "normalize";
+@import "compass/css3";
+@import "compass/utilities/sprites";
+@import "compass/utilities/general/clearfix";
+
+/* SVG Gradients in Opera & IE9 */
+$experimental-support-for-svg: true;
+
+body {
+	height:100%;
+	width:100%;
+	min-width:550px;
+	position:relative;
+	font-family: 'Oswald',sans-serif;
+	color:#666;
+	-webkit-font-smoothing: antialiased;
+	font-weight:300;
+
+	h1,h2,h3,h4 {
+		font-weight:300;
+		line-height:1.1em;
+	}
+	h1 {
+		font-size: 6em;
+		&.subhead {
+			text-align:center;
+			margin-top:0px;
+		}
+	}
+	h2 {
+		font-size: 2.5em;
+	}
+	h3 {
+		font-size:1.5em;
+	}
+	h4 {
+		font-size:1em;
+	}
+
+	a{
+		@include transition-property(all);
+		@include transition-duration(0.2s);
+		&:hover{
+			@include transition-property(all);
+			@include transition-duration(0.2s);
+		}
+	}
+
+	.red{
+		color: #D1554D;
+	}
+	.blue{
+		color: #3681C8;
+	}
+
+	.wrapper {
+		max-width:1040px;
+		@include box-sizing(border-box);
+		height:100%;
+		margin: 0px auto;
+		padding: 100px 20px;
+		position:relative;
+		@include clearfix;
+	}
+
+	.chrome-frame {
+		background: url('/img/chrome-bar.png') no-repeat #f1f1f1;
+		border-radius: 5px;
+		@include box-sizing(border-box);
+		padding:80px 55px 0;
+		color:#666;
+	}
+
+	#intro {
+		width:100%;
+		min-height:800px;
+		text-align:center;
+
+		.gjpresents {
+			font-size:1.75em;
+
+			img {
+				vertical-align:-90%;
+				margin-right:20px;
+				width:100px;
+			}
+		}
+
+		.title {
+			h1 {
+				text-transform:uppercase;
+				margin: 140px 0 20px 0;
+			}
+			h2 {
+				font-size:2.5em;
+				margin: 0;
+			}
+		}
+
+		.scroll {
+			position:absolute;
+			bottom:5%;
+			width:100%;
+			text-align:center;
+			opacity:0.6;
+			@include text-shadow(0 1px 0 rgba(0,0,0,0.3));
+			span {
+				display: block;
+				font-size:1.75em;
+				text-transform:uppercase;
+				&.darr {
+					font-size: 4em;
+				}
+			}
+		}
+	}
+
+	#whatAreThey {
+		background-color:#3681C8;
+		color:#fff;
+		h1 {
+			text-align:center;
+			margin-top:0;
+		}
+
+		#dummyInfographic {
+			float:left;
+			height: 625px;
+			max-width: 500px;
+			margin:0 60px 0 0;
+			padding: 80px 55px 0;
+
+			div {
+				height:126px;
+				width:440px;
+				margin-bottom:50px;
+				opacity:0;
+				&.text{
+					background: url('/img/text.png') no-repeat;
+				}
+				&.chart{
+					background: url('/img/chart.png') no-repeat;
+				}
+				&.illustration{
+					background: url('/img/illustration.png') no-repeat;
+				}
+			}
+		}
+		#dummyExplanation {
+			width:400px;
+			float:left;
+			font-size: 2em;
+			text-align:justify;
+		}
+	}
+
+	#whyEffective {
+		background-color:#D1554D;
+		color:#fff;
+
+		.chrome-frame {
+			width:100%;
+			min-height:900px;
+			padding-bottom:60px;
+			p{
+				margin:0 0 100px 0;
+				font-size: 2.25em;
+				@include transition-property(all);
+				@include transition-duration(0.4s);
+				&.blur{
+					color:transparent;
+					@include text-shadow(0 0 8px #666);
+					@include transition-property(all);
+					@include transition-duration(0.4s);
+				}
+
+				b{
+					@include text-shadow(none);
+					font-size:1.25em;
+					padding: 0px 5px;
+				}
+			}
+			a.makeChart{
+				display:block;
+				margin:100px auto;
+				width:200px;
+				background-color:#3681C8;
+				padding:5px;
+				text-align:center;
+				@include border-radius(5px);
+				color:#fff;
+				font-size:2.5em;
+				cursor:pointer;
+				cursor:hand;
+				&:hover{
+					color:rgba(255,255,255,0.8);
+				}
+			}
+			ul.legend{
+				margin:0;
+				padding-left: 100px;
+				li{
+					float:left;
+					font-size:2em;
+					list-style-type:square;
+					margin-right:100px;
+				}
+			}
+		}
+	}
+}
