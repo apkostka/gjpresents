@@ -59,3 +59,14 @@ block content
 				li
 					a(class='twitter')
 						img(src='/img/twitter.png')
+
+			h3 Here's what people are currently saying about infographics on Twitter:
+			div(class='chrome-frame')
+				ul
+					for tweet in tweets
+						li
+							img(src='#{tweet.user.profile_image_url}')
+							if tweet.entities.urls[0]
+								a(href='#{tweet.entities.urls[0].url}',target='_blank') #{tweet.text}
+							else
+								a= tweet.text

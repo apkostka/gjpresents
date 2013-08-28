@@ -543,10 +543,9 @@ body #whyEffective {
 /* line 162, ../sass/screen.scss */
 body #whyEffective .chrome-frame {
   width: 100%;
-  min-height: 900px;
   padding-bottom: 60px;
 }
-/* line 166, ../sass/screen.scss */
+/* line 165, ../sass/screen.scss */
 body #whyEffective .chrome-frame p {
   margin: 0 0 100px 0;
   font-size: 2.25em;
@@ -559,7 +558,7 @@ body #whyEffective .chrome-frame p {
   -o-transition-duration: 0.4s;
   transition-duration: 0.4s;
 }
-/* line 171, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 body #whyEffective .chrome-frame p.blur {
   color: transparent;
   text-shadow: 0 0 8px #666666;
@@ -572,13 +571,13 @@ body #whyEffective .chrome-frame p.blur {
   -o-transition-duration: 0.4s;
   transition-duration: 0.4s;
 }
-/* line 178, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 body #whyEffective .chrome-frame p b {
   text-shadow: none;
   font-size: 1.25em;
   padding: 0px 5px;
 }
-/* line 184, ../sass/screen.scss */
+/* line 183, ../sass/screen.scss */
 body #whyEffective .chrome-frame a.makeChart {
   display: block;
   margin: 100px auto;
@@ -596,44 +595,44 @@ body #whyEffective .chrome-frame a.makeChart {
   cursor: pointer;
   cursor: hand;
 }
-/* line 196, ../sass/screen.scss */
+/* line 195, ../sass/screen.scss */
 body #whyEffective .chrome-frame a.makeChart:hover {
   color: rgba(255, 255, 255, 0.8);
 }
-/* line 199, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 body #whyEffective .chrome-frame a.makeChart .chart {
   width: 100%;
 }
-/* line 203, ../sass/screen.scss */
+/* line 202, ../sass/screen.scss */
 body #whyEffective .chrome-frame ul.legend {
   margin: 0;
   padding-left: 150px;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 207, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 body #whyEffective .chrome-frame ul.legend li {
   float: left;
   font-size: 2em;
   list-style-type: square;
   margin-right: 100px;
 }
-/* line 218, ../sass/screen.scss */
+/* line 217, ../sass/screen.scss */
 body #whoUses h3 {
   text-align: center;
-  margin: 0 0 60px 0;
+  margin-bottom: 60px;
 }
-/* line 223, ../sass/screen.scss */
-body ul.trendSort {
+/* line 222, ../sass/screen.scss */
+body #whoUses ul.trendSort {
   text-align: center;
-  margin: 60px 0 0;
+  margin: 60px 0 120px;
 }
-/* line 226, ../sass/screen.scss */
-body ul.trendSort li {
+/* line 225, ../sass/screen.scss */
+body #whoUses ul.trendSort li {
   display: inline-block;
 }
-/* line 229, ../sass/screen.scss */
-body ul.trendSort li a {
+/* line 228, ../sass/screen.scss */
+body #whoUses ul.trendSort li a {
   display: block;
   padding: 20px 0 15px 0;
   margin: 0px 30px;
@@ -647,20 +646,78 @@ body ul.trendSort li a {
   cursor: pointer;
   cursor: hand;
 }
-/* line 238, ../sass/screen.scss */
-body ul.trendSort li a img {
-  height: 60px;
+/* line 237, ../sass/screen.scss */
+body #whoUses ul.trendSort li a:hover {
+  color: rgba(102, 102, 102, 0.8);
 }
-/* line 241, ../sass/screen.scss */
-body ul.trendSort li a.google {
+/* line 239, ../sass/screen.scss */
+body #whoUses ul.trendSort li a:hover img {
+  opacity: 0.8;
+}
+/* line 243, ../sass/screen.scss */
+body #whoUses ul.trendSort li a img {
+  height: 60px;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+/* line 248, ../sass/screen.scss */
+body #whoUses ul.trendSort li a.google {
   background: #D1554D;
 }
-/* line 244, ../sass/screen.scss */
-body ul.trendSort li a.twitter {
+/* line 251, ../sass/screen.scss */
+body #whoUses ul.trendSort li a.twitter {
   background: #3681C8;
 }
-/* line 247, ../sass/screen.scss */
-body ul.trendSort li a.plus {
+/* line 254, ../sass/screen.scss */
+body #whoUses ul.trendSort li a.plus {
   font-size: 10em;
   line-height: 0.5em;
+  height: 100px;
+  padding: 0px;
+}
+/* line 263, ../sass/screen.scss */
+body #whoUses .chrome-frame {
+  margin: 60px 0;
+  padding: 80px 0;
+}
+/* line 267, ../sass/screen.scss */
+body #whoUses .chrome-frame ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 270, ../sass/screen.scss */
+body #whoUses .chrome-frame ul li {
+  display: inline-block;
+  width: 400px;
+  margin: 20px 50px;
+  list-style: none;
+  font-size: 1.5em;
+  vertical-align: top;
+}
+/* line 278, ../sass/screen.scss */
+body #whoUses .chrome-frame ul li img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  float: left;
+  margin: 0 10px 0px 0;
+  position: relative;
+  top: 15px;
+}
+/* line 286, ../sass/screen.scss */
+body #whoUses .chrome-frame ul li a {
+  color: inherit;
+  text-decoration: inherit;
+}
+/* line 289, ../sass/screen.scss */
+body #whoUses .chrome-frame ul li a:hover {
+  color: #3681C8;
 }

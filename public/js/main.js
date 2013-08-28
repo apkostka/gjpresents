@@ -47,7 +47,7 @@ var googleData = {
 	pointStrokeColor : "#fff",
 	data : [30,40,50,60,70]
 };
-var options = {
+var lineOptions = {
 	scaleOverride: true,
 	scaleSteps: 10,
 	scaleStepWidth: 10,
@@ -88,7 +88,7 @@ jQuery(function($){
 	function trendChart(datasets) {
 		trendData.datasets = datasets;
 		var ctx = $('#trendChart').get(0).getContext('2d');
-		var newChart = new Chart(ctx).Line(trendData, options);
+		var newChart = new Chart(ctx).Line(trendData, lineOptions);
 	}
 	$('#whoUses .chart').html('<canvas id="trendChart" width="'+$('#whoUses .chart').width()+'" height="400"></canvas>');
 	var datasets = [googleData,twitterData];
