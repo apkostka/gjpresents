@@ -57,6 +57,33 @@ var lineOptions = {
 	animationEasing: 'easeInOutQuint'
 };
 
+//Bottom Line graph data
+var pieData = [
+	{
+		value: 15,
+		color: '#3681C8'
+	},
+	{
+		value: 85,
+		color: '#D1554D'
+	}
+];
+function pieCallback() {
+	$('#bottomLine h2.yes').fadeTo(500,1,function(){
+		$('#bottomLine h2.hellYes').delay(500).fadeTo(500,1);
+	});
+};
+var pieOptions = {
+	segmentShowStroke: true,
+	segmentStrokeColor: '#154A7B',
+	segmentStrokeWidth: 2,
+	animation: true,
+	animationSteps: 50,
+	animationEasing: 'easeInOutQuint',
+	animateRotate: true,
+	onAnimationComplete: pieCallback
+};
+
 //DOM manipulation - GO!!!
 jQuery(function($){
 
@@ -109,4 +136,10 @@ jQuery(function($){
 		trendChart([googleData,twitterData]);
 		return false;
 	});
+
+	//Should We chart
+	$('#bottomLine .chart').waypoint(function(){
+		var ctx = $('#bottomLine .chart canvas').get(0).getContext('2d');
+		var newChart = new Chart(ctx).Pie(pieData, pieOptions);
+	}, { offset: 'bottom-in-view', triggerOnce: true });
 });

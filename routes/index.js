@@ -4,7 +4,7 @@
  */
 
 exports.index = function(req, res){
-	/*
+	
 	var Twit = require('twit');
 	var T = new Twit({
 		consumer_key: '2SyDSvXmNovejvtYHiEGVQ',
@@ -14,13 +14,11 @@ exports.index = function(req, res){
 	});
 
   var stream = T.get('search/tweets', 
-  	{ q: 'infographics -RT', count: 6 },
+  	{ q: 'infographic -RT', count: 3 },
   	function(err,reply){
   		if(err) console.log(err);
   		res.render('index', { title: 'Express', tweets: reply.statuses });
   	}
   );
-	*/
-  var tweets = [];
-  res.render('index', { title: 'Express', tweets: tweets });
+
 };

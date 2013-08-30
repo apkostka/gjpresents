@@ -65,12 +65,24 @@ block content
 				ul
 					for tweet in tweets
 						li
-							img(src='#{tweet.user.profile_image_url}')
+							div(class='profile')
+								img(src='#{tweet.user.profile_image_url}')
 							if tweet.entities.urls[0]
-								a(href='#{tweet.entities.urls[0].url}',target='_blank') #{tweet.text}
+								p
+									a(href='#{tweet.entities.urls[0].url}',target='_blank') #{tweet.text}
 							else
-								a= tweet.text
+								p
+									a= tweet.text
 
 	section(id='bottomLine')
 		div(class='wrapper')
 			h1(class='subhead') The Bottom Line
+			h2 Should we create infographics?
+			div(class='chart')
+				canvas(height='400',width='400')
+				h2(class='yes') Yes - 85%
+				h2(class='hellYes') Hell Yes - 15%
+
+	footer
+		div(class='wrapper').
+			Created by: <img src="/img/logo.png" width="80"/> Gunn|Jerkens Marketing Communications
