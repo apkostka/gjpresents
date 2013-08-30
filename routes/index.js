@@ -4,7 +4,7 @@
  */
 
 exports.index = function(req, res){
-	
+	/*
 	var Twit = require('twit');
 	var T = new Twit({
 		consumer_key: '2SyDSvXmNovejvtYHiEGVQ',
@@ -20,4 +20,7 @@ exports.index = function(req, res){
   		res.render('index', { title: 'Express', tweets: reply.statuses });
   	}
   );
+	*/
+  var tweets = [];
+  res.render('index', { title: 'Express', tweets: tweets });
 };

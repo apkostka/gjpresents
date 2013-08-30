@@ -684,7 +684,7 @@ body #whoUses ul.trendSort li a.plus {
 /* line 263, ../sass/screen.scss */
 body #whoUses .chrome-frame {
   margin: 60px 0;
-  padding: 80px 0;
+  padding: 80px 0 60px 0;
 }
 /* line 267, ../sass/screen.scss */
 body #whoUses .chrome-frame ul {
@@ -720,4 +720,9 @@ body #whoUses .chrome-frame ul li a {
 /* line 289, ../sass/screen.scss */
 body #whoUses .chrome-frame ul li a:hover {
   color: #3681C8;
+}
+/* line 298, ../sass/screen.scss */
+body #bottomLine {
+  background: #154A7B;
+  color: #fff;
 }

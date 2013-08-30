@@ -262,7 +262,7 @@ body {
 		}
 		.chrome-frame{
 			margin: 60px 0;
-			padding:80px 0;
+			padding:80px 0 60px 0;
 
 			ul{
 				margin:0;
@@ -293,5 +293,10 @@ body {
 				}
 			}
 		}
+	}
+
+	#bottomLine{
+		background: #154A7B;
+		color:#fff;
 	}
 }
