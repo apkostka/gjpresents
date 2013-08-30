@@ -142,4 +142,24 @@ jQuery(function($){
 		var ctx = $('#bottomLine .chart canvas').get(0).getContext('2d');
 		var newChart = new Chart(ctx).Pie(pieData, pieOptions);
 	}, { offset: 'bottom-in-view', triggerOnce: true });
+
+	//Twitter Stream
+	var socket = io.connect('http://localhost:3000');
+	socket.on('TwitConnect', function(data){
+		console.log(data.message);
+	});
+	socket.on('tweet', function(data){
+		console.log($('#whoUses .chrome-frame ul li').length);
+		if($('#whoUses .chrome-frame ul li').length > 4){
+			$('#whoUses .chrome-frame ul li').each(function(index,el){
+				if(index > 4){
+					$(el).remove();
+				}
+			});
+		}
+		if(data.tweet){
+			var tweet = data.tweet;
+			$('#whoUses .chrome-frame ul').prepend('<li><div class="profile"><img src="'+tweet.user.profile_image_url+'"/></div><p>'+tweet.text+'</p></li>')
+		};
+	});
 });

@@ -693,7 +693,7 @@ body #whoUses .chrome-frame ul {
 }
 /* line 270, ../sass/screen.scss */
 body #whoUses .chrome-frame ul li {
-  width: 800;
+  width: 800px;
   margin: 20px 100px;
   list-style: none;
   font-size: 1.75em;

@@ -63,16 +63,6 @@ block content
 			h3 Here's what people are currently saying about infographics on Twitter:
 			div(class='chrome-frame')
 				ul
-					for tweet in tweets
-						li
-							div(class='profile')
-								img(src='#{tweet.user.profile_image_url}')
-							if tweet.entities.urls[0]
-								p
-									a(href='#{tweet.entities.urls[0].url}',target='_blank') #{tweet.text}
-							else
-								p
-									a= tweet.text
 
 	section(id='bottomLine')
 		div(class='wrapper')
