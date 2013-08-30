@@ -31,6 +31,10 @@ app.get('/', function(req,res){
 });
 
 var io = require('socket.io').listen(app.listen(app.get('port')));
+io.configure(function () { 
+  io.set("transports", ["xhr-polling"]); 
+  io.set("polling duration", 10); 
+});
 
 io.sockets.on('connection', function(socket){
 	var Twit = require('twit');
@@ -41,6 +45,13 @@ io.sockets.on('connection', function(socket){
 		access_token_secret: 'Fdj6NyRteSsnmI06qmgf8nsCoSXfBueSkMVkHzV4A'
 	});
 
+	var feed = T.get('search/tweets', 
+  	{ q: 'infographic -RT', count: 6 },
+  	function(err,reply){
+  		if(err) console.log(err);
+  		socket.emit('feed', { feed: reply.statuses });
+  	}
+  );
   var stream = T.stream('user', { track: ['AndrewKostka'] });
   stream.on('connect', function(){
   	socket.emit('TwitConnect', { message: 'Connected' });

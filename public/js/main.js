@@ -148,6 +148,14 @@ jQuery(function($){
 	socket.on('TwitConnect', function(data){
 		console.log(data.message);
 	});
+	socket.on('feed', function(data){
+		if(data.feed){
+			feed = data.feed;
+			$.each(feed, function(index,tweet){
+				$('#whoUses .chrome-frame ul').prepend('<li><div class="profile"><img src="'+tweet.user.profile_image_url+'"/></div><p>'+tweet.text+'</p></li>')
+			});
+		}
+	});
 	socket.on('tweet', function(data){
 		console.log($('#whoUses .chrome-frame ul li').length);
 		if($('#whoUses .chrome-frame ul li').length > 4){
@@ -159,7 +167,7 @@ jQuery(function($){
 		}
 		if(data.tweet){
 			var tweet = data.tweet;
-			$('#whoUses .chrome-frame ul').prepend('<li><div class="profile"><img src="'+tweet.user.profile_image_url+'"/></div><p>'+tweet.text+'</p></li>')
+			$('#bottomLine .chrome-frame ul').prepend('<li><div class="profile"><img src="'+tweet.user.profile_image_url+'"/></div><p>'+tweet.text+'</p></li>')
 		};
 	});
 });

@@ -283,10 +283,12 @@ body {
 							@include border-radius(50%);
 							position:relative;
 							top:40px;
+							width:60px;
 						}
 					}
 					p{
-					width:720px;
+					width:700px;
+					margin-left:100px;
 						a{
 							color:inherit;
 							text-decoration:inherit;
@@ -319,6 +321,52 @@ body {
 				&.hellYes{
 					top: -10px;
 					right:135px;
+				}
+			}
+		}
+
+		h2.tweet{
+			margin-top:240px;
+		}
+
+		.chrome-frame{
+			margin: 100px 0;
+			padding:80px 0 60px 0;
+
+			ul{
+				margin:0;
+				padding:0;
+				li{
+					width:800px;
+					margin:20px 100px;
+					list-style:none;
+					font-size:1.75em;
+					vertical-align:top;
+					@include clearfix;
+
+					div.profile{
+						float:left;
+						margin-right:40px;
+						height:100px;
+						img{
+							@include border-radius(50%);
+							position:relative;
+							top:40px;
+							width:60px;
+						}
+					}
+					p{
+					width:700px;
+					text-align:left;
+					margin-left:100px;
+						a{
+							color:inherit;
+							text-decoration:inherit;
+							&:hover{
+								color:#3681C8;
+							}
+						}
+					}
 				}
 			}
 		}

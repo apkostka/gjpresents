@@ -716,59 +716,117 @@ body #whoUses .chrome-frame ul li div.profile img {
   border-radius: 50%;
   position: relative;
   top: 40px;
+  width: 60px;
 }
-/* line 288, ../sass/screen.scss */
+/* line 289, ../sass/screen.scss */
 body #whoUses .chrome-frame ul li p {
-  width: 720px;
+  width: 700px;
+  margin-left: 100px;
 }
-/* line 290, ../sass/screen.scss */
+/* line 292, ../sass/screen.scss */
 body #whoUses .chrome-frame ul li p a {
   color: inherit;
   text-decoration: inherit;
 }
-/* line 293, ../sass/screen.scss */
+/* line 295, ../sass/screen.scss */
 body #whoUses .chrome-frame ul li p a:hover {
   color: #3681C8;
 }
-/* line 303, ../sass/screen.scss */
+/* line 305, ../sass/screen.scss */
 body #bottomLine {
   background: #154A7B;
   color: #fff;
   text-align: center;
 }
-/* line 308, ../sass/screen.scss */
+/* line 310, ../sass/screen.scss */
 body #bottomLine .chart {
   margin: 100px 0 0;
   position: relative;
 }
-/* line 312, ../sass/screen.scss */
+/* line 314, ../sass/screen.scss */
 body #bottomLine .chart h2 {
   position: absolute;
   opacity: 0;
 }
-/* line 315, ../sass/screen.scss */
+/* line 317, ../sass/screen.scss */
 body #bottomLine .chart h2.yes {
   top: 140px;
   left: 145px;
 }
-/* line 319, ../sass/screen.scss */
+/* line 321, ../sass/screen.scss */
 body #bottomLine .chart h2.hellYes {
   top: -10px;
   right: 135px;
 }
-/* line 327, ../sass/screen.scss */
+/* line 328, ../sass/screen.scss */
+body #bottomLine h2.tweet {
+  margin-top: 240px;
+}
+/* line 332, ../sass/screen.scss */
+body #bottomLine .chrome-frame {
+  margin: 100px 0;
+  padding: 80px 0 60px 0;
+}
+/* line 336, ../sass/screen.scss */
+body #bottomLine .chrome-frame ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 339, ../sass/screen.scss */
+body #bottomLine .chrome-frame ul li {
+  width: 800px;
+  margin: 20px 100px;
+  list-style: none;
+  font-size: 1.75em;
+  vertical-align: top;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 347, ../sass/screen.scss */
+body #bottomLine .chrome-frame ul li div.profile {
+  float: left;
+  margin-right: 40px;
+  height: 100px;
+}
+/* line 351, ../sass/screen.scss */
+body #bottomLine .chrome-frame ul li div.profile img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  position: relative;
+  top: 40px;
+  width: 60px;
+}
+/* line 358, ../sass/screen.scss */
+body #bottomLine .chrome-frame ul li p {
+  width: 700px;
+  text-align: left;
+  margin-left: 100px;
+}
+/* line 362, ../sass/screen.scss */
+body #bottomLine .chrome-frame ul li p a {
+  color: inherit;
+  text-decoration: inherit;
+}
+/* line 365, ../sass/screen.scss */
+body #bottomLine .chrome-frame ul li p a:hover {
+  color: #3681C8;
+}
+/* line 375, ../sass/screen.scss */
 body footer {
   padding: 0;
   background: #444;
   color: #fff;
   text-align: center;
 }
-/* line 332, ../sass/screen.scss */
+/* line 380, ../sass/screen.scss */
 body footer .wrapper {
   padding: 30px 20px 40px 20px;
   font-size: 2em;
 }
-/* line 335, ../sass/screen.scss */
+/* line 383, ../sass/screen.scss */
 body footer .wrapper img {
   vertical-align: middle;
   margin: 0px 20px;
