@@ -69,7 +69,7 @@ var pieData = [
 	}
 ];
 function pieCallback() {
-	$('#bottomLine h2.yes').fadeTo(500,1,function(){
+	$('#bottomLine h2.yes').delay(300).fadeTo(500,1,function(){
 		$('#bottomLine h2.hellYes').delay(500).fadeTo(500,1);
 	});
 };
@@ -141,7 +141,7 @@ jQuery(function($){
 	$('#bottomLine .chart').waypoint(function(){
 		var ctx = $('#bottomLine .chart canvas').get(0).getContext('2d');
 		var newChart = new Chart(ctx).Pie(pieData, pieOptions);
-	}, { offset: 'bottom-in-view', triggerOnce: true });
+	}, { offset: 100, triggerOnce: true });
 
 	//Twitter Stream
 	var socket = io.connect(window.location.hostname);
