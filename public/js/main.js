@@ -144,7 +144,7 @@ jQuery(function($){
 	}, { offset: 'bottom-in-view', triggerOnce: true });
 
 	//Twitter Stream
-	var socket = io.connect('http://localhost:3000');
+	var socket = io.connect(window.location.hostname);
 	socket.on('TwitConnect', function(data){
 		console.log(data.message);
 	});
