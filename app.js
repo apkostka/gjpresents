@@ -36,14 +36,17 @@ io.configure(function () {
   io.set("polling duration", 10); 
 });
 
+var Twit = require('twit');
+var T = new Twit({
+	consumer_key: 'qMN0bEAf2zAxJ5xj88HOhw',
+	consumer_secret: 'oyIaJDMjQ36m4RpSxErNfxWVH63MYnXLb5u9mspdCo',
+	access_token: '1706015071-KGbKCIZqC7BFQVqJwshUa8XJiw71xNFONNqw8ig',
+	access_token_secret: 'k4LAreow3M3eX56KdyI5ANexrKlopATZH0bV7Wmr9TQ'
+});
+
+var stream = T.stream('user', { track: ['gjpresents'] });
+
 io.sockets.on('connection', function(socket){
-	var Twit = require('twit');
-	var T = new Twit({
-		consumer_key: '2SyDSvXmNovejvtYHiEGVQ',
-		consumer_secret: 'j4x75dLiQs6T5MOcfUfNP0wm4gzwxwCN1h2GQxX3w',
-		access_token: '73980942-fbl5WWJD7SP4mdZzjhomXkh6Z7L5sTOuft3gs2Z08',
-		access_token_secret: 'Fdj6NyRteSsnmI06qmgf8nsCoSXfBueSkMVkHzV4A'
-	});
 
 	var feed = T.get('search/tweets', 
   	{ q: 'infographic -RT', count: 6 },
@@ -52,7 +55,15 @@ io.sockets.on('connection', function(socket){
   		socket.emit('feed', { feed: reply.statuses });
   	}
   );
-  var stream = T.stream('user', { track: ['AndrewKostka'] });
+
+  var timeline = T.get('statuses/mentions_timeline', 
+  	{ count: 6 },
+  	function(err,reply){
+  		if(err) console.log(err);
+  		socket.emit('timeline', { timeline: reply });
+  	}
+  );
+  
   stream.on('connect', function(){
   	socket.emit('TwitConnect', { message: 'Connected' });
   });

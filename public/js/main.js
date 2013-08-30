@@ -152,19 +152,20 @@ jQuery(function($){
 		if(data.feed){
 			feed = data.feed;
 			$.each(feed, function(index,tweet){
-				$('#whoUses .chrome-frame ul').prepend('<li><div class="profile"><img src="'+tweet.user.profile_image_url+'"/></div><p>'+tweet.text+'</p></li>')
+				$('#whoUses .chrome-frame ul').append('<li><div class="profile"><img src="'+tweet.user.profile_image_url+'"/></div><p>'+tweet.text+'</p></li>')
+			});
+		}
+	});
+	socket.on('timeline', function(data){
+		console.log(data);
+		if(data.timeline){
+			timeline = data.timeline;
+			$.each(timeline, function(index,tweet){
+				$('#bottomLine .chrome-frame ul').append('<li><div class="profile"><img src="'+tweet.user.profile_image_url+'"/></div><p>'+tweet.text+'</p></li>')
 			});
 		}
 	});
 	socket.on('tweet', function(data){
-		console.log($('#whoUses .chrome-frame ul li').length);
-		if($('#whoUses .chrome-frame ul li').length > 4){
-			$('#whoUses .chrome-frame ul li').each(function(index,el){
-				if(index > 4){
-					$(el).remove();
-				}
-			});
-		}
 		if(data.tweet){
 			var tweet = data.tweet;
 			$('#bottomLine .chrome-frame ul').prepend('<li><div class="profile"><img src="'+tweet.user.profile_image_url+'"/></div><p>'+tweet.text+'</p></li>')
