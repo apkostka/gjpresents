@@ -6,7 +6,8 @@
 var express = require('express')
   , routes = require('./routes')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , config = require('./config');
 
 var app = express();
 
@@ -38,10 +39,10 @@ io.configure(function () {
 
 var Twit = require('twit');
 var T = new Twit({
-	consumer_key: 'qMN0bEAf2zAxJ5xj88HOhw',
-	consumer_secret: 'oyIaJDMjQ36m4RpSxErNfxWVH63MYnXLb5u9mspdCo',
-	access_token: '1706015071-KGbKCIZqC7BFQVqJwshUa8XJiw71xNFONNqw8ig',
-	access_token_secret: 'k4LAreow3M3eX56KdyI5ANexrKlopATZH0bV7Wmr9TQ'
+	consumer_key: config.twitter.consumer_key,
+	consumer_secret: config.twitter.consumer_secret,
+	access_token: config.twitter.access_token,
+	access_token_secret: config.twitter.access_token_secret
 });
 
 var stream = T.stream('user', { track: ['gjpresents'] });
